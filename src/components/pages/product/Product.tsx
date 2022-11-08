@@ -1,18 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
+import {useParams} from 'react-router-dom';
 import { Products } from "../../../services/products";
-import ProductCard from "../../ui/productCard/ProductCard";
 import styles from "./Product.module.scss";
 import { FC } from "react";
 import Layout from "../../ui/layout/Layout";
 
 const Product: FC = () => {
-  const { data: products, isLoading } = useQuery(["products"], () =>
-    Products.getProducts()
+
+  const params = useParams()
+
+  const { data: product, isLoading } = useQuery(["product", params.id], () =>
+    Products.getProductByID(params.id || '')
   );
 
   return (
     <Layout>
-        <div>Product</div>
+        {isLoading && (<div>Loading...</div>)}
+        {product?.title}
     </Layout>
   )
 }
