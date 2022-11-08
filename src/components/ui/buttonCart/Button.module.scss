@@ -1,0 +1,9 @@
+.button {
+    @apply bg-orange-200 p-2.5 border border-double border-[#000] uppercase mb-4;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.25s;  
+        @apply bg-orange-300 transition-all
+    }
+}

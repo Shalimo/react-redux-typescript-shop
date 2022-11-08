@@ -1,9 +1,20 @@
+export interface IResponse {
+    limit: number,
+    products: IProduct,
+    skip: number,
+    total: number
+}
+
 export interface IProduct {
     id: number;
     title: string;
-    price: number;
     description: string;
+    price: number;
+    discountPercentage: number;
+    rating: number;
+    stock: number;
+    brand: string;
     category: string;
-    image: string;
-    rating: number
+    thumbnail: string;
+    images: string[];
 }

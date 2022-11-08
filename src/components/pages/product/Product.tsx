@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import {useParams} from 'react-router-dom';
-import { Products } from "../../../services/products";
+import { Products } from "../../../services/products.service";
 import styles from "./Product.module.scss";
 import { FC } from "react";
 import Layout from "../../ui/layout/Layout";
+import ProductInfo from "../../ui/productInfo/ProductInfo";
+import Button from "../../ui/buttonCart/Button";
 
 const Product: FC = () => {
 
@@ -17,6 +19,8 @@ const Product: FC = () => {
     <Layout>
         {isLoading && (<div>Loading...</div>)}
         {product?.title}
+        <ProductInfo/>
+        <Button>Add to cart</Button>
     </Layout>
   )
 }

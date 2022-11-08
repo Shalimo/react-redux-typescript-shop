@@ -7,7 +7,7 @@ const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
   return (
     <Link className={styles.container} to={`/product/${product.id}`}>
       <div
-        style={{ backgroundImage: `url(${product.image})` }}
+        style={{ backgroundImage: `url(${product.thumbnail})` }}
         className={styles.image}
       ></div>
       <div className={styles.titles}>
