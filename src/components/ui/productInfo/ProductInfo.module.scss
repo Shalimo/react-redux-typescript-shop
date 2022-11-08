@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 25px;
 }
 
 .mainImage {
-    @apply w-80 h-80 px-10 mb-10;
+    @apply w-72 h-72 px-10 mb-10;
 }
 
 .gridImages {

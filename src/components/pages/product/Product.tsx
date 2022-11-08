@@ -5,7 +5,6 @@ import styles from "./Product.module.scss";
 import { FC } from "react";
 import Layout from "../../ui/layout/Layout";
 import ProductInfo from "../../ui/productInfo/ProductInfo";
-import Button from "../../ui/buttonCart/Button";
 
 const Product: FC = () => {
 
@@ -18,8 +17,7 @@ const Product: FC = () => {
   return (
     <Layout>
         {isLoading && (<div>Loading...</div>)}
-        <h1>{product?.title}</h1>
-        {product ? <ProductInfo images={product?.images}/> : <div>Empty</div>}
+        {product ? <ProductInfo images={product?.images} price={product?.price} title={product?.title}/> : <div>Empty</div>}
     </Layout>
   )
 }
