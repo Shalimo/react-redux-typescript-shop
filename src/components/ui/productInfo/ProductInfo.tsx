@@ -1,10 +1,14 @@
 import styles from "./ProductInfo.module.scss";
 import { FC } from "react";
 
-const ProductInfo: FC = () => {
+const ProductInfo: FC<{images: string[]}> = ({images}) => {
 
   return (
-    <div className={styles.container}>Info</div>
+    <div className={styles.container}>
+        {images.map((item) => (
+            <img src={item}/>
+        ))}
+    </div>
   )
 }
 
