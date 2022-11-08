@@ -3,6 +3,7 @@ import { Products } from "../../../services/products";
 import ProductCard from "../../ui/productCard/ProductCard";
 import styles from "./Product.module.scss";
 import { FC } from "react";
+import Layout from "../../ui/layout/Layout";
 
 const Product: FC = () => {
   const { data: products, isLoading } = useQuery(["products"], () =>
@@ -10,7 +11,9 @@ const Product: FC = () => {
   );
 
   return (
-    <div>Product</div>
+    <Layout>
+        <div>Product</div>
+    </Layout>
   )
 }
 

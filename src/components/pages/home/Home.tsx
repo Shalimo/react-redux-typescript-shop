@@ -3,6 +3,7 @@ import { Products } from "../../../services/products";
 import ProductCard from "../../ui/productCard/ProductCard";
 import styles from "./Home.module.scss";
 import { FC } from "react";
+import Layout from "../../ui/layout/Layout";
 
 const Home: FC = () => {
   const { data: products, isLoading } = useQuery(["products"], () =>
@@ -10,18 +11,20 @@ const Home: FC = () => {
   );
 
   return (
-    <div className={styles.content}>
-      <h1 className={styles.title}>Fakeshop</h1>
-      <div className={styles.gridContainer}>
-        {isLoading ? (
-          <div>Loading...</div>
-        ) : (
-          products?.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))
-        )}
+    <Layout>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Fakeshop</h1>
+        <div className={styles.gridContainer}>
+          {isLoading ? (
+            <div>Loading...</div>
+          ) : (
+            products?.map((product) => (
+              <ProductCard product={product} key={product.id} />
+            ))
+          )}
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
