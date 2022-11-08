@@ -1,0 +1,38 @@
+.container {
+    height: auto;
+    width: 255px;
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    @apply bg-white;
+
+    img {
+        @apply mb-1 w-48 h-52;
+    }
+
+    .titles {
+        @apply mt-auto mr-auto;
+    }
+
+    .title {
+        @apply text-lg mt-2;       
+    }
+
+    .price {
+        @apply text-xl mt-5; 
+    }
+}
+
+.container:hover {
+    transform: scale(1.05);
+    transition: transform 0.25s;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+

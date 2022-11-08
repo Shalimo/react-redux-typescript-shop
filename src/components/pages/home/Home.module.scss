@@ -1,3 +1,9 @@
-.bg {
-    background-color: lightcoral;
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.gridContainer {
+    @apply grid grid-cols-3 gap-7;
 }
