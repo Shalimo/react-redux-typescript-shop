@@ -30,7 +30,7 @@ const ProductInfo: FC<{ images: string[], price: number, title: string }> = ({ i
         ))}
         </div>
         <h1>{title}</h1>
-        <h1>${price}</h1>
+        <h2>${price}</h2>
         <Button>Add to cart</Button>
       </div>
   );
