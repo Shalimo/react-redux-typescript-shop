@@ -1,26 +1,19 @@
-import { useEffect, useState } from "react"
+import { useQuery } from "@tanstack/react-query"
 import { Products } from "../../../services/products"
 import styles from "./Home.module.scss"
-import { IProduct } from "../../../types/product.interfase"
+import { FC } from "react"
 
-const Home = () => {
+const Home: FC = () => {
 
-    const [products, setProducts] = useState<IProduct[]>([])
-    const [error, setError] = useState('')
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() => {
-        Products.getProducts()
-            .then(products => setProducts(products))
-            .catch(error => setError(error))
-            .finally(() => setIsLoading(false))
-    }, [])
+    const {
+        data: products,
+        isLoading
+    } = useQuery(['products'], () => Products.getProducts())
 
     return (
         <div className={styles.bg}>
-            {error && <div>{error}</div>}
-            {isLoading ? <div>Loading...</div> : products.map(product => (
-                <div>
+            {isLoading ? <div>Loading...</div> : products?.map(product => (
+                <div key={product.id}>
                     {product.title}
                 </div>
             ))}
