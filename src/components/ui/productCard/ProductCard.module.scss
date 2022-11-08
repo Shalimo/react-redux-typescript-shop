@@ -2,7 +2,7 @@
     height: auto;
     width: 255px;
     border: 2px solid black;
-    border-top-left-radius: 10px;
+    border-top-left-radius: 15px;
     margin-bottom: 28px;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,8 @@
     padding: 10px;
     @apply bg-white;
 
-    img {
-        @apply mb-1 w-48 h-52;
+    .image {
+        @apply mb-1 w-full h-52 bg-cover bg-center bg-no-repeat;
     }
 
     .titles {
@@ -19,11 +19,11 @@
     }
 
     .title {
-        @apply text-lg mt-2;       
+        @apply text-xl mt-2 font-semibold;       
     }
 
     .price {
-        @apply text-xl mt-5; 
+        @apply text-lg mt-5; 
     }
 }
 

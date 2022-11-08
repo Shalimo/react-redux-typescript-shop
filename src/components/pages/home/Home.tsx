@@ -11,6 +11,7 @@ const Home: FC = () => {
 
   return (
     <div className={styles.content}>
+      <h1 className={styles.title}>Fakeshop</h1>
       <div className={styles.gridContainer}>
         {isLoading ? (
           <div>Loading...</div>

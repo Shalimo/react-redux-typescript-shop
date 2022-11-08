@@ -6,10 +6,14 @@ const ProductCard: FC<{product: IProduct}> = ({product}) => {
 
     return (
         <div className={styles.container}>
-            <img src={product.image} alt={product.title}/>
+            <div style={{backgroundImage: `url(${product.image})`}} className={styles.image}></div>
             <div className={styles.titles}>
                 <div className={styles.title}>{product.title}</div>
-                <div className={styles.price}>{`${product.price}$`}</div>
+                <div className={styles.price}>{new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    maximumFractionDigits: 0
+                }).format(product.price)}</div>
             </div>
         </div>
     )

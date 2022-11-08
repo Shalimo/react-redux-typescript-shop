@@ -1,9 +1,14 @@
 .content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
 }
 
+.title {
+    @apply mb-10 text-3xl font-semibold;
+}
+
 .gridContainer {
-    @apply grid grid-cols-3 gap-7;
+    @apply grid grid-cols-4 gap-7;
 }
