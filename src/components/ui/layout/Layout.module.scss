@@ -1,4 +1,12 @@
 .container {
+
+    h1 {
+        text-align: center;
+        font-size: 20px;
+        font-weight:600;
+        margin: 20px 0;
+    }
+
     header {
         @apply bg-blue-400 h-16 w-full flex items-center justify-center;
     }
@@ -17,6 +25,10 @@
         &:hover {
             transform: scale(1.05);
             transition: transform 0.25s;
-        }
+            -webkit-transition: transform 0.25s;
+            -moz-transition: transform 0.25s;
+            -ms-transition: transform 0.25s;
+            -o-transition: transform 0.25s;
+}
     }
 }

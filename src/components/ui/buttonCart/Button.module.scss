@@ -1,5 +1,5 @@
 .button {
-    @apply bg-orange-200 p-2.5 border border-double border-[#000] uppercase mb-4;
+    @apply bg-orange-200 p-2.5 border border-double border-[#000] uppercase mb-4 px-10 mt-10;
 
     &:hover {
         transform: scale(1.05);

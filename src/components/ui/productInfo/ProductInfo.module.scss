@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainImage {
+    @apply w-80 h-80 px-10 mb-10;
+}
+
+.gridImages {
+    @apply grid grid-cols-3 gap-5;
+
+    .image {
+        @apply w-40 h-40;
+    }
+}
+
+.active {
+    @apply border-[#000] border border-solid
+}
+
+.unActive {
+    @apply border-[#fff] border border-solid
+}
+
+.image {
+    @apply w-full h-52 bg-cover bg-center bg-no-repeat;
+}

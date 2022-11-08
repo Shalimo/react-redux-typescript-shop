@@ -18,9 +18,8 @@ const Product: FC = () => {
   return (
     <Layout>
         {isLoading && (<div>Loading...</div>)}
-        {product?.title}
+        <h1>{product?.title}</h1>
         {product ? <ProductInfo images={product?.images}/> : <div>Empty</div>}
-        <Button>Add to cart</Button>
     </Layout>
   )
 }

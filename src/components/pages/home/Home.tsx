@@ -8,19 +8,19 @@ import Layout from "../../ui/layout/Layout";
 const Home: FC = () => {
   const { data: products, isLoading } = useQuery(["products"], () =>
     Products.getProducts(), {
-      select: ({products}) => products 
+      select: ({products}) => products
     }
   );
 
   return (
     <Layout>
       <div className={styles.content}>
-        <h1 className={styles.title}>Fakeshop</h1>
+        <h2 className={styles.title}>Fakeshop</h2>
         <div className={styles.gridContainer}>
           {isLoading ? (
             <div>Loading...</div>
           ) : (
-            products?.map((product) => (
+            products.reverse()?.map((product) => (
               <ProductCard product={product} key={product.id} />
             ))
           )}
