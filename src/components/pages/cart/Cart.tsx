@@ -12,7 +12,7 @@ const Cart: FC = () => {
   return (
     <Layout>
       <div className={styles.container}>
-        {products.map((item) => (
+        {products.length === 0 ? <h1>Cart is empty</h1> : products.map((item) => (
           <div className={styles.product} key={item.id}>
             <h3>{item.title}</h3>
             <h4>{`$${item.price}`}</h4>
