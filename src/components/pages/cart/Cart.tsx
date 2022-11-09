@@ -7,9 +7,15 @@ import Layout from "../../ui/layout/Layout";
 const Cart: FC = () => {
   const { products } = useTypedSelector((state) => state.cart);
 
+  const { removeProductFromCart } = useActions();
+
   return (
     <Layout>
-      <h1>Cart</h1>
+      {products.map((item) => (
+        <div key={item.id}>
+            {item.title}
+        </div>
+      ))}
     </Layout>
   );
 };

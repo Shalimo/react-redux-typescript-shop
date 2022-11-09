@@ -1,6 +1,5 @@
 import styles from "./ProductInfo.module.scss";
-import { FC, useState } from "react";
-import Button from "../buttonCart/Button";
+import { FC, useState } from "react"
 
 const ProductInfo: FC<{ images: string[], price: number, title: string }> = ({ images, price, title }) => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -31,7 +30,6 @@ const ProductInfo: FC<{ images: string[], price: number, title: string }> = ({ i
         </div>
         <h1>{title}</h1>
         <h2>${price}</h2>
-        <Button>Add to cart</Button>
       </div>
   );
 };
