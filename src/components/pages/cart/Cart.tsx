@@ -3,6 +3,8 @@ import { FC } from "react";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 import { useActions } from "../../../hooks/useActions";
 import Layout from "../../ui/layout/Layout";
+import Button from "../../ui/buttonCart/Button";
+import { Link } from "react-router-dom";
 
 const Cart: FC = () => {
   const { products } = useTypedSelector((state) => state.cart);
@@ -19,6 +21,7 @@ const Cart: FC = () => {
             <button onClick={() => {removeProductFromCart(item.id)}}>Remove</button>
           </div>
         ))}
+        {products.length === 0 && <Link to='/'><Button>Back to store</Button></Link>}
       </div>
     </Layout>
   );

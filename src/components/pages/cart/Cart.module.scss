@@ -1,5 +1,6 @@
 .container {
-
+    @apply mt-4;
+    
     .product {
         @apply border border-solid border-[blue] p-3 m-5 flex justify-between items-center rounded-md;
 
