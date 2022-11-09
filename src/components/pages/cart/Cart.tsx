@@ -11,11 +11,15 @@ const Cart: FC = () => {
 
   return (
     <Layout>
-      {products.map((item) => (
-        <div key={item.id}>
-            {item.title}
-        </div>
-      ))}
+      <div className={styles.container}>
+        {products.map((item) => (
+          <div className={styles.product} key={item.id}>
+            <h3>{item.title}</h3>
+            <h4>{`$${item.price}`}</h4>
+            <button>Remove</button>
+          </div>
+        ))}
+      </div>
     </Layout>
   );
 };

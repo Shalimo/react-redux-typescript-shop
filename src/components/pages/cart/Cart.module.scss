@@ -1,0 +1,24 @@
+.container {
+
+    .product {
+        @apply border border-solid border-[blue] p-3 m-5 flex justify-between items-center;
+
+        button {
+            @apply bg-orange-200 p-2.5 border border-double border-[#000] ml-10;
+
+            &:hover {
+                transform: scale(1.05);
+                transition: transform 0.25s;  
+                @apply bg-orange-300 transition-all
+            }
+        }
+
+        h3 {
+            @apply text-2xl font-semibold;
+        }
+
+        h4 {
+            @apply text-xl mr-auto ml-4;
+        }
+    }
+}
