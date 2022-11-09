@@ -21,10 +21,14 @@
     }
     
     nav {
-        @apply font-semibold text-lg;
+        @apply font-semibold text-xl;
     
         .link:hover {
             color: rgba(224, 233, 247, 0.782)
+        }
+
+        .activeLink {
+            color: rgb(170, 38, 31);
         }
     }
 
@@ -34,10 +38,6 @@
         &:hover {
             transform: scale(1.05);
             transition: transform 0.25s;
-            -webkit-transition: transform 0.25s;
-            -moz-transition: transform 0.25s;
-            -ms-transition: transform 0.25s;
-            -o-transition: transform 0.25s;
 }
     }
 }
