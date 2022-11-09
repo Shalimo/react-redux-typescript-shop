@@ -1,6 +1,6 @@
 export interface IResponse {
     limit: number,
-    products: IProduct,
+    products: IProduct[],
     skip: number,
     total: number
 }

@@ -22,9 +22,14 @@ const Product: FC = () => {
 
 	const inCart = products.some(item => item.id === Number(params.id))
 
+	if (!product) {
+		return (
+			<Layout><Spinner /></Layout>
+		)
+	}
+
 	return (
 		<Layout>
-			{isLoading && <Spinner />}
 			{product && (
 				<ProductInfo
 					images={product?.images}

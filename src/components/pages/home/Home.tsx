@@ -11,7 +11,7 @@ const Home: FC = () => {
 		['products'],
 		() => Products.getProducts(),
 		{
-			select: ({ products }) => products
+			select: ({ products }) => products.reverse()
 		}
 	)
 
@@ -21,7 +21,7 @@ const Home: FC = () => {
 				<h3 className={styles.title}>Fakeshop</h3>
 				{isLoading && <Spinner />}
 				<div className={styles.gridContainer}>
-					{products?.reverse()?.map(product => (
+					{products?.reverse().map(product => (
 						<ProductCard product={product} key={product.id} />
 					))}
 				</div>
