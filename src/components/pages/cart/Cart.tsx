@@ -16,7 +16,7 @@ const Cart: FC = () => {
           <div className={styles.product} key={item.id}>
             <h3>{item.title}</h3>
             <h4>{`$${item.price}`}</h4>
-            <button>Remove</button>
+            <button onClick={() => {removeProductFromCart(item.id)}}>Remove</button>
           </div>
         ))}
       </div>
