@@ -18,7 +18,7 @@ const Layout: FC<PropsWithChildren<{ title?: string }>> = ({
       <header>
         <nav>
           <Link className={styles.link} to="/">Home</Link>
-          <Link className={styles.link} to="/">Cart</Link>
+          <Link className={styles.link} to="/cart">Cart</Link>
         </nav>
       </header>
       {children}

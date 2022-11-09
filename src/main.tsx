@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./store/store";
 import Home from "./components/pages/home/Home";
 import Product from "./components/pages/product/Product";
+import Cart from "./components/pages/cart/Cart";
 import "./index.css";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </Router>
       </PersistGate>
