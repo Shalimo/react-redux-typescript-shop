@@ -13,7 +13,7 @@ const ProductInfo: FC<{ images: string[], price: number, title: string }> = ({ i
         ></div>
 
         <div className={styles.gridImages}>
-        {images.map((item, index) => (
+        {images?.map((item, index) => (
           <button
             className={index === imageIndex ? styles.active : styles.unActive}
             onClick={() => {

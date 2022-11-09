@@ -4,6 +4,7 @@ import { Products } from '../../../services/products.service'
 import Button from '../../ui/buttonCart/Button'
 import { FC } from 'react'
 import Layout from '../../ui/layout/Layout'
+import Spinner from '../../ui/spinner/Spinner'
 import ProductInfo from '../../ui/productInfo/ProductInfo'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { useActions } from '../../../hooks/useActions'
@@ -23,25 +24,25 @@ const Product: FC = () => {
 
 	return (
 		<Layout>
-			{isLoading && <div>Loading...</div>}
-			{product ? (
+			{isLoading && <Spinner />}
+			{product && (
 				<ProductInfo
 					images={product?.images}
 					price={product?.price}
 					title={product?.title}
 				/>
-			) : (
-				<div>Empty</div>
 			)}
-			<Button
-				onClick={() => {
-					!inCart
-						? addProductToCart(product)
-						: removeProductFromCart(Number(params.id))
-				}}
-			>
-				{inCart ? `Delete from cart` : `Add to cart`}
-			</Button>
+			{isLoading ? null : (
+				<Button
+					onClick={() => {
+						!inCart
+							? addProductToCart(product)
+							: removeProductFromCart(Number(params.id))
+					}}
+				>
+					{inCart ? `Delete from cart` : `Add to cart`}
+				</Button>
+			)}
 		</Layout>
 	)
 }
