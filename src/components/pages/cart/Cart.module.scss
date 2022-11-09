@@ -1,10 +1,10 @@
 .container {
 
     .product {
-        @apply border border-solid border-[blue] p-3 m-5 flex justify-between items-center;
+        @apply border border-solid border-[blue] p-3 m-5 flex justify-between items-center rounded-md;
 
         button {
-            @apply bg-orange-200 p-2.5 border border-double border-[#000] ml-10;
+            @apply bg-orange-200 p-2.5 border border-double border-[#000] ml-10 rounded-md;
 
             &:hover {
                 transform: scale(1.05);

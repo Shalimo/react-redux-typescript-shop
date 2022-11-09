@@ -6,7 +6,7 @@
 }
 
 .mainImage {
-    @apply w-72 h-72 px-10 mb-10;
+    @apply w-72 h-72 px-10 mb-10 rounded-md;
 }
 
 .gridImages {
@@ -18,13 +18,13 @@
 }
 
 .active {
-    @apply border-[#000] border border-solid
+    @apply border-[#000] border border-solid rounded-md
 }
 
 .unActive {
-    @apply border-[#fff] border border-solid
+    @apply border-[#fff] border border-solid rounded-md
 }
 
 .image {
-    @apply w-full h-52 bg-cover bg-center bg-no-repeat;
+    @apply w-full h-52 bg-cover bg-center bg-no-repeat rounded-md;
 }
