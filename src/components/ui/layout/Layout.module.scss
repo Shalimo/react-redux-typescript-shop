@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     h1 {
         text-align: center;
@@ -16,8 +17,7 @@
     }
 
     header {
-        @apply bg-blue-400 h-16 flex items-center justify-center;
-        width: 2500px;
+        @apply bg-blue-400 pt-[30px] pb-[30px] w-full text-center;
     }
     
     nav {

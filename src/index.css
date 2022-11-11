@@ -4,5 +4,5 @@
 
 body {
   @apply bg-blue-300 overflow-x-hidden;
-  padding: 0 calc(20px - (100vw - 100%)) 0 0;
+  @apply p-0 m-0;
 }

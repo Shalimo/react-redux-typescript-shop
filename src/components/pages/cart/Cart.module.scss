@@ -1,3 +1,5 @@
+@import '../../../assets/media';
+
 .container {
     @apply mt-4;
     
@@ -16,6 +18,9 @@
 
         h3 {
             @apply text-2xl font-semibold;
+            @include media(mobile) {
+                @apply text-xl;
+            }
         }
 
         h4 {
